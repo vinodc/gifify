@@ -74,6 +74,16 @@ gifify -x recording.mov
 
 GIF renderers typically cap the framerate somewhere between 60 and 100 frames per second. If you choose to change the framerate or playback speed of your GIFs, ensure your framerates do not exceed 60 frames per second to ensure your GIFs play consistently. An easy way to compute this is to ensure that FPS  (`-r`) x SPEED (`-s`) is not greater than 60.
 
+## Troubleshooting
+
+If you encounter the error `dyld: Symbol not found: __cg_jpeg_resync_to_restart`:
+
+   cd /usr/local/lib
+   rm libJPEG.dylib
+   ln -s /System/Library/Frameworks/ApplicationServices.framework/Versions/Current/Frameworks/ImageIO.framework/Resources/libJPEG.dylib libJPEG.dylib
+
+Do the same for libGIF, libPng and libTIFF.
+
 ## License
 
 MIT (See [LICENSE][3])
