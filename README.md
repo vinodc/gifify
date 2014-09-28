@@ -78,9 +78,11 @@ GIF renderers typically cap the framerate somewhere between 60 and 100 frames pe
 
 If you encounter the error `dyld: Symbol not found: __cg_jpeg_resync_to_restart`:
 
-   cd /usr/local/lib
-   rm libJPEG.dylib
-   ln -s /System/Library/Frameworks/ApplicationServices.framework/Versions/Current/Frameworks/ImageIO.framework/Resources/libJPEG.dylib libJPEG.dylib
+```
+cd /usr/local/lib
+rm libJPEG.dylib
+ln -s /System/Library/Frameworks/ApplicationServices.framework/Versions/Current/Frameworks/ImageIO.framework/Resources/libJPEG.dylib libJPEG.dylib
+```
 
 Do the same for libGIF, libPng and libTIFF.
 
